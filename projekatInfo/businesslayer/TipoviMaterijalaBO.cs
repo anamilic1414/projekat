@@ -11,7 +11,7 @@ namespace projekatInfo.businesslayer
     {
         public TipoviMaterijalaBO():base()
         {
-            this.PrimaryData = (TipoviMaterijalaTable)new TipoviMaterijalaTable(Program.DataSet); 
+            this.PrimaryData = DataTableFactory.GetDataTable("TipoviMaterijalaTable");
         }
 
         

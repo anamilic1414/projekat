@@ -9,27 +9,59 @@ using System.Windows.Forms;
 
 namespace projekatInfo.datalayer
 {
-    abstract class MyDataTable:DataTable
+    public abstract class MyDataTable:DataTable
     {
       
         public MyDataSet DataSet;
         SQLiteDataAdapter adp;
         SQLiteCommandBuilder cmb;
-
+        public static string TableName;
+        public static string GetTableName()
+        {
+            return TableName;
+        }
         public abstract void InitTable();
+
+        public MyDataTable(MyDataSet DataSet) : this(DataSet, "")
+        {
+        }
 
         public MyDataTable(MyDataSet DataSet, string tableName):base()
         {
-            
+            if(tableName == "")
+            { 
+            this.InitTable();
+            }
+            else
+            {
+                TableName = tableName;
+            }
             this.DataSet = DataSet;
-            this.TableName = tableName;
-            //this.DataSet.Tables.Add(this.TableName,this);
-            string query = "select * from "+ this.TableName;
-            SQLiteCommand command = Program.konekcija.CreateCommand();
-           /* command.CommandText = query;
-            command.ExecuteNonQuery();*/
-            adp = new SQLiteDataAdapter(query, Program.konekcija);
-            adp.Fill(this);
+           
+            if(TableName == string.Empty)
+            {
+                throw new Exception("Naziv tabele ne moze biti prazan");
+            }
+            //factory patern sadrzi sve ostale klase i daje ti odredjenu
+            //kod filtriranja mora da se menja ime, jer svaka je karakteristicna
+
+                this.DataSet.Tables.Add(this);
+            
+                string query = "select * from " + TableName;
+                SQLiteCommand command = Program.konekcija.CreateCommand();
+                /* command.CommandText = query;
+                 command.ExecuteNonQuery();*/
+                adp = new SQLiteDataAdapter(query, Program.konekcija);
+                adp.Fill(this);
+        }
+    
+        /// <summary>
+        /// metod gettable koji vraca iz dataset
+        /// </summary>
+        
+            public static void getTable()
+        {
+
         }
 
         public void Update()

@@ -8,14 +8,29 @@ namespace projekatInfo.datalayer
 {
     class MaterijalTable:MyDataTable
     {
-        public MaterijalTable(MyDataSet DataSet) : base(DataSet, "materijal")
+        public new static string TableName = "materijal";
+
+        public MaterijalTable(MyDataSet DataSet, string tableName) : base(DataSet, tableName)
         {
+            MyDataTable tipoviMaterijalaTable = DataTableFactory.GetDataTable("TipoviMaterijalaTable", "tipoviMaterijala");
+            
+
+            DataSet.Relations.Add("VezaMaterijalTipovi", tipoviMaterijalaTable.Columns["id"], this.Columns["idTipMaterijala"]);
+            this.Columns.Add("nazivTipaMaterijala", typeof(string));
+            
+            this.Columns["nazivTipaMaterijala"].Expression = "parent.naziv";
             
         }
+        public MaterijalTable(MyDataSet DataSet) : this(DataSet,"")
+        {
+
+        }
+
+        
 
         public override void InitTable()
         {
-            this.TableName = "materijal";
+                //this.TableName = "materijal";   
         }
     }
 }

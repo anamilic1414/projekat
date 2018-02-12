@@ -9,14 +9,17 @@ namespace projekatInfo.datalayer
 {
     class TipoviMaterijalaTable:MyDataTable
     {
-
-        public TipoviMaterijalaTable(MyDataSet DataSet) : base(DataSet, "tipoviMaterijala")
+        public new static string TableName = "tipoviMaterijala";
+        public TipoviMaterijalaTable(MyDataSet DataSet) : this(DataSet,"")
+        {
+        }
+        public TipoviMaterijalaTable(MyDataSet DataSet,string tableName) : base(DataSet, tableName)
         {
         }
 
         public override void InitTable()
         {
-            this.TableName = "tipoviMaterijala";
+            //this.TableName = "tipoviMaterijala";
         }
         
     }

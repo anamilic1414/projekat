@@ -8,13 +8,18 @@ namespace projekatInfo.datalayer
 {
     class SastavnicaTable:MyDataTable
     {
-        public SastavnicaTable(MyDataSet DataSet) : base(DataSet, "sastavnica")
+        public new static string TableName = "sastavnica";
+        public SastavnicaTable(MyDataSet DataSet) : this(DataSet,"")
+        {
+        }
+
+        public SastavnicaTable(MyDataSet DataSet, string tableName) : base(DataSet, tableName)
         {
         }
 
         public override void InitTable()
         {
-            this.TableName = "sastavnica";
+            //this.TableName = "sastavnica";
         }
     }
 }

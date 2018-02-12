@@ -67,6 +67,7 @@
     <Compile Include="businesslayer\BaseBO.cs" />
     <Compile Include="businesslayer\MaterijalBO.cs" />
     <Compile Include="businesslayer\TipoviMaterijalaBO.cs" />
+    <Compile Include="datalayer\DataTableFactory.cs" />
     <Compile Include="datalayer\MaterijalTable.cs">
       <SubType>Component</SubType>
     </Compile>

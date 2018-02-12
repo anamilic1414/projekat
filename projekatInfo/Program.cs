@@ -25,7 +25,7 @@ namespace projekatInfo
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             konekcija = new SQLiteConnection("Data Source=projekat.db;Version=3;New=False;Compress=True;");
-            DataSet = new MyDataSet(konekcija);
+            DataSet = DataTableFactory.GetDataSet();
             konekcija.Open();
             Application.Run(new FrmMaterijalSastavnica());
         }
