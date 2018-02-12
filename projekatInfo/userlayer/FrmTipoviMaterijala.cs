@@ -11,17 +11,32 @@ using System.Windows.Forms;
 
 namespace projekatInfo
 {
-    public partial class Form1 : Form
+    public partial class FrmTipoviMaterijala : Form
     {
-        public Form1()
+
+        TipoviMaterijalaBO tipoviMaterijalaBO;
+        public FrmTipoviMaterijala()
         {
             InitializeComponent();
         }
 
         private void btnPrikazi_Click(object sender, EventArgs e)
         {
-            TipoviMaterijalaBO tipoviMaterijalaBO = new TipoviMaterijalaBO();
+            tipoviMaterijalaBO = new TipoviMaterijalaBO();
             dataGrid1.DataSource = tipoviMaterijalaBO.PrimaryData;
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                tipoviMaterijalaBO.PrimaryData.Update();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message,"Error");
+            }
+
         }
     }
 }

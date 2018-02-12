@@ -21,7 +21,18 @@ namespace projekatInfo.businesslayer
                 primaryData = value;
             }
         }
-        protected MyDataTable secondaryData;
+        private MyDataTable secondaryData;
+        public MyDataTable SecondaryData
+        {
+            get
+            {
+                return secondaryData;
+            }
+            set
+            {
+                secondaryData = value;
+            }
+        }
         public BaseBO()
         {
             

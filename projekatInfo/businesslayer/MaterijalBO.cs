@@ -7,13 +7,12 @@ using System.Threading.Tasks;
 
 namespace projekatInfo.businesslayer
 {
-    class TipoviMaterijalaBO:BaseBO
+    class MaterijalBO:BaseBO
     {
-        public TipoviMaterijalaBO():base()
+        public MaterijalBO():base()
         {
-            this.PrimaryData = (TipoviMaterijalaTable)new TipoviMaterijalaTable(Program.DataSet); 
+            this.PrimaryData = new MaterijalTable(Program.DataSet);
+            this.SecondaryData = new SastavnicaTable(Program.DataSet);
         }
-
-        
     }
 }

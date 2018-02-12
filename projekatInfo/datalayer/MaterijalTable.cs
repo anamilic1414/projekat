@@ -1,23 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace projekatInfo.datalayer
 {
-    class TipoviMaterijalaTable:MyDataTable
+    class MaterijalTable:MyDataTable
     {
-
-        public TipoviMaterijalaTable(MyDataSet DataSet) : base(DataSet, "tipoviMaterijala")
+        public MaterijalTable(MyDataSet DataSet) : base(DataSet, "materijal")
         {
+            
         }
 
         public override void InitTable()
         {
-            this.TableName = "tipoviMaterijala";
+            this.TableName = "materijal";
         }
-        
     }
 }

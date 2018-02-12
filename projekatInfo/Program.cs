@@ -1,4 +1,5 @@
 ﻿using projekatInfo.datalayer;
+using projekatInfo.userlayer;
 using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
@@ -26,7 +27,7 @@ namespace projekatInfo
             konekcija = new SQLiteConnection("Data Source=projekat.db;Version=3;New=False;Compress=True;");
             DataSet = new MyDataSet(konekcija);
             konekcija.Open();
-            Application.Run(new Form1());
+            Application.Run(new FrmMaterijalSastavnica());
         }
     }
 }
