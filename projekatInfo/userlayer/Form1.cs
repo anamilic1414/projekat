@@ -1,4 +1,5 @@
-﻿using System;
+﻿using projekatInfo.businesslayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace projekatInfo
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void btnPrikazi_Click(object sender, EventArgs e)
+        {
+            TipoviMaterijalaBO tipoviMaterijalaBO = new TipoviMaterijalaBO();
+            dataGrid1.DataSource = tipoviMaterijalaBO.PrimaryData;
         }
     }
 }
