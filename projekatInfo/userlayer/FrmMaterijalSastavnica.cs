@@ -37,9 +37,17 @@ namespace projekatInfo.userlayer
             dataGrid2.Columns["idMat"].Visible = false;  
         }
 
+        
+
         private void materijaliToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmMaterijali frm = new FrmMaterijali();
+            frm.ShowDialog();
+        }
+
+        private void porudžbenicaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmPorudzbenica frm = new FrmPorudzbenica();
             frm.ShowDialog();
         }
     }

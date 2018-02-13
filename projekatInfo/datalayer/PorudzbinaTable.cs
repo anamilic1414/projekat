@@ -11,6 +11,14 @@ namespace projekatInfo.datalayer
         public new static string TableName = "porudzbinaZg";
         public PorudzbinaTable(MyDataSet DataSet, string tableName):base(DataSet, tableName)
         {
+            MyDataTable stavke = DataTableFactory.GetDataTable("StavkePorudzbineTable", "porudzbinaSt");
+            if (!DataSet.Relations.Contains("VezaPorudzbineStavke"))
+            {
+                DataSet.Relations.Add("VezaPorudzbineStavke", this.Columns["id"], stavke.Columns["idPorudzbine"]);
+
+                /*this.Columns.Add("nazivTipaMaterijala", typeof(string));
+                this.Columns["nazivTipaMaterijala"].Expression = "parent.naziv";*/
+            }
         }
 
         public PorudzbinaTable(MyDataSet DataSet) : base(DataSet, "")

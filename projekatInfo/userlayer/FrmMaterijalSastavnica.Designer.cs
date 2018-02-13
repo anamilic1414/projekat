@@ -34,8 +34,9 @@
             this.datotekeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.šifrarnikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoviMaterijalaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnPrikazi = new System.Windows.Forms.Button();
             this.materijaliToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnPrikazi = new System.Windows.Forms.Button();
+            this.porudžbenicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid2)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -71,7 +72,7 @@
             // datotekeToolStripMenuItem
             // 
             this.datotekeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.materijaliToolStripMenuItem});
+            this.porudžbenicaToolStripMenuItem});
             this.datotekeToolStripMenuItem.Name = "datotekeToolStripMenuItem";
             this.datotekeToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.datotekeToolStripMenuItem.Text = "&Dokumenti";
@@ -79,7 +80,8 @@
             // šifrarnikToolStripMenuItem
             // 
             this.šifrarnikToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tipoviMaterijalaToolStripMenuItem});
+            this.tipoviMaterijalaToolStripMenuItem,
+            this.materijaliToolStripMenuItem});
             this.šifrarnikToolStripMenuItem.Name = "šifrarnikToolStripMenuItem";
             this.šifrarnikToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.šifrarnikToolStripMenuItem.Text = "Ši&frarnici";
@@ -87,9 +89,16 @@
             // tipoviMaterijalaToolStripMenuItem
             // 
             this.tipoviMaterijalaToolStripMenuItem.Name = "tipoviMaterijalaToolStripMenuItem";
-            this.tipoviMaterijalaToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.tipoviMaterijalaToolStripMenuItem.Text = "Tipovi materijala";
+            this.tipoviMaterijalaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.tipoviMaterijalaToolStripMenuItem.Text = "&TipoviMaterijala";
             this.tipoviMaterijalaToolStripMenuItem.Click += new System.EventHandler(this.tipoviMaterijalaToolStripMenuItem_Click);
+            // 
+            // materijaliToolStripMenuItem
+            // 
+            this.materijaliToolStripMenuItem.Name = "materijaliToolStripMenuItem";
+            this.materijaliToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.materijaliToolStripMenuItem.Text = "&Materijali";
+            this.materijaliToolStripMenuItem.Click += new System.EventHandler(this.materijaliToolStripMenuItem_Click);
             // 
             // btnPrikazi
             // 
@@ -101,12 +110,12 @@
             this.btnPrikazi.UseVisualStyleBackColor = true;
             this.btnPrikazi.Click += new System.EventHandler(this.btnPrikazi_Click);
             // 
-            // materijaliToolStripMenuItem
+            // porudžbenicaToolStripMenuItem
             // 
-            this.materijaliToolStripMenuItem.Name = "materijaliToolStripMenuItem";
-            this.materijaliToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.materijaliToolStripMenuItem.Text = "&Materijali";
-            this.materijaliToolStripMenuItem.Click += new System.EventHandler(this.materijaliToolStripMenuItem_Click);
+            this.porudžbenicaToolStripMenuItem.Name = "porudžbenicaToolStripMenuItem";
+            this.porudžbenicaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.porudžbenicaToolStripMenuItem.Text = "&Porudžbenica";
+            this.porudžbenicaToolStripMenuItem.Click += new System.EventHandler(this.porudžbenicaToolStripMenuItem_Click);
             // 
             // FrmMaterijalSastavnica
             // 
@@ -139,5 +148,6 @@
         private System.Windows.Forms.ToolStripMenuItem tipoviMaterijalaToolStripMenuItem;
         private System.Windows.Forms.Button btnPrikazi;
         private System.Windows.Forms.ToolStripMenuItem materijaliToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem porudžbenicaToolStripMenuItem;
     }
 }

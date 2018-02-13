@@ -11,7 +11,8 @@ namespace projekatInfo.businesslayer
     {
         public PorudzbinaBO():base()
         {
-            this.PrimaryData = DataTableFactory.GetDataTable("PorudbinaTable", "porudzbina");
+            this.PrimaryData = DataTableFactory.GetDataTable("PorudzbinaTable", "porudzbinaZg");
+            this.SecondaryData = DataTableFactory.GetDataTable("StavkePorudzbineTable", "porudzbinaSt");
         }
     }
 }
