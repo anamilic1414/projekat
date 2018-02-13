@@ -19,6 +19,7 @@ namespace projekatInfo.datalayer
             this.Columns.Add("nazivTipaMaterijala", typeof(string));
             
             this.Columns["nazivTipaMaterijala"].Expression = "parent.naziv";
+
             
         }
         public MaterijalTable(MyDataSet DataSet) : this(DataSet,"")
@@ -28,9 +29,9 @@ namespace projekatInfo.datalayer
 
         
 
-        public override void InitTable()
+        public override string InitTable()
         {
-                //this.TableName = "materijal";   
+            return TableName;   
         }
     }
 }

@@ -17,8 +17,9 @@ namespace projekatInfo.datalayer
         {
         }
 
-        public override void InitTable()
+        public override string InitTable()
         {
+            return TableName;
             //this.TableName = "sastavnica";
         }
     }

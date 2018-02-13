@@ -20,7 +20,7 @@ namespace projekatInfo.datalayer
         {
             return TableName;
         }
-        public abstract void InitTable();
+        public abstract string InitTable();
 
         public MyDataTable(MyDataSet DataSet) : this(DataSet, "")
         {
@@ -29,8 +29,8 @@ namespace projekatInfo.datalayer
         public MyDataTable(MyDataSet DataSet, string tableName):base()
         {
             if(tableName == "")
-            { 
-            this.InitTable();
+            {
+                TableName = InitTable();
             }
             else
             {
