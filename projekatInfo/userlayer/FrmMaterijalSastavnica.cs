@@ -29,7 +29,13 @@ namespace projekatInfo.userlayer
         {
             materijalBO = new MaterijalBO();
             dataGrid1.DataSource = materijalBO.PrimaryData;
+            dataGrid1.Columns["id"].Visible = false;
+            dataGrid1.Columns["idTipMaterijala"].Visible = false;
             dataGrid2.DataSource = materijalBO.SecondaryData;
+            dataGrid2.Columns["id"].Visible = false;
+            dataGrid2.Columns["parentId"].Visible = false;
+            dataGrid2.Columns["idMat"].Visible = false;
+            
             
         }
     }
