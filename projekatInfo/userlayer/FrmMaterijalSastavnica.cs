@@ -34,9 +34,13 @@ namespace projekatInfo.userlayer
             dataGrid2.DataSource = materijalBO.SecondaryData;
             dataGrid2.Columns["id"].Visible = false;
             dataGrid2.Columns["parentId"].Visible = false;
-            dataGrid2.Columns["idMat"].Visible = false;
-            
-            
+            dataGrid2.Columns["idMat"].Visible = false;  
+        }
+
+        private void materijaliToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmMaterijali frm = new FrmMaterijali();
+            frm.ShowDialog();
         }
     }
 }

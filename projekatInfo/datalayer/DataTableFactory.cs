@@ -50,6 +50,9 @@ namespace projekatInfo.datalayer
                 case "MaterijalTable":
                     result = new MaterijalTable(DataSet, imeTabele);
                     break;
+                case "PorudzbinaTable":
+                    result = new PorudzbinaTable(DataSet, imeTabele);
+                    break;
                 default: throw new Exception("Ne poznajem ime tabele: "+imeKlase);
                         //ne instanciram ja data set nego i z 
                         //factoroa get data set i gde pravim tabele pravi ih g=factory

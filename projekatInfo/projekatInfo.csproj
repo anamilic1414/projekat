@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="businesslayer\BaseBO.cs" />
     <Compile Include="businesslayer\MaterijalBO.cs" />
+    <Compile Include="businesslayer\PorudzbinaBO.cs" />
     <Compile Include="businesslayer\TipoviMaterijalaBO.cs" />
     <Compile Include="datalayer\DataTableFactory.cs" />
     <Compile Include="datalayer\MaterijalTable.cs">
@@ -77,11 +78,20 @@
     <Compile Include="datalayer\MyDataTable.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="datalayer\PorudzbinaTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="datalayer\SastavnicaTable.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="datalayer\TipoviMaterijalaTable.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="userlayer\FrmMaterijali.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userlayer\FrmMaterijali.Designer.cs">
+      <DependentUpon>FrmMaterijali.cs</DependentUpon>
     </Compile>
     <Compile Include="userlayer\FrmMaterijalSastavnica.cs">
       <SubType>Form</SubType>
@@ -97,6 +107,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="userlayer\FrmMaterijali.resx">
+      <DependentUpon>FrmMaterijali.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="userlayer\FrmMaterijalSastavnica.resx">
       <DependentUpon>FrmMaterijalSastavnica.cs</DependentUpon>
     </EmbeddedResource>
