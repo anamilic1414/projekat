@@ -28,33 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnPrikazi = new System.Windows.Forms.Button();
             this.dataGrid1 = new System.Windows.Forms.DataGridView();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnPrikazi
-            // 
-            this.btnPrikazi.Location = new System.Drawing.Point(287, 32);
-            this.btnPrikazi.Name = "btnPrikazi";
-            this.btnPrikazi.Size = new System.Drawing.Size(74, 23);
-            this.btnPrikazi.TabIndex = 0;
-            this.btnPrikazi.Text = "Prikazi";
-            this.btnPrikazi.UseVisualStyleBackColor = true;
-            this.btnPrikazi.Click += new System.EventHandler(this.btnPrikazi_Click);
             // 
             // dataGrid1
             // 
+            this.dataGrid1.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid1.Location = new System.Drawing.Point(22, 48);
+            this.dataGrid1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGrid1.Location = new System.Drawing.Point(0, 119);
             this.dataGrid1.Name = "dataGrid1";
-            this.dataGrid1.Size = new System.Drawing.Size(249, 195);
+            this.dataGrid1.Size = new System.Drawing.Size(258, 195);
             this.dataGrid1.TabIndex = 1;
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(102, 264);
+            this.btnUpdate.Location = new System.Drawing.Point(13, 40);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 3;
@@ -62,26 +55,35 @@
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnUpdate);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(158, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(100, 119);
+            this.panel1.TabIndex = 3;
+            // 
             // FrmTipoviMaterijala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(373, 314);
-            this.Controls.Add(this.btnUpdate);
+            this.ClientSize = new System.Drawing.Size(258, 314);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGrid1);
-            this.Controls.Add(this.btnPrikazi);
             this.Name = "FrmTipoviMaterijala";
             this.Text = "FrmTipoviMaterijala";
+            this.Load += new System.EventHandler(this.FrmTipoviMaterijala_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnPrikazi;
         private System.Windows.Forms.DataGridView dataGrid1;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

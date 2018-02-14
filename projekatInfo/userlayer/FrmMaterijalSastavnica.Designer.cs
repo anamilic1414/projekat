@@ -32,11 +32,11 @@
             this.dataGrid2 = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.datotekeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.porudžbenicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.šifrarnikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoviMaterijalaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.materijaliToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnPrikazi = new System.Windows.Forms.Button();
-            this.porudžbenicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid2)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -77,6 +77,13 @@
             this.datotekeToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.datotekeToolStripMenuItem.Text = "&Dokumenti";
             // 
+            // porudžbenicaToolStripMenuItem
+            // 
+            this.porudžbenicaToolStripMenuItem.Name = "porudžbenicaToolStripMenuItem";
+            this.porudžbenicaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.porudžbenicaToolStripMenuItem.Text = "&Porudžbenica";
+            this.porudžbenicaToolStripMenuItem.Click += new System.EventHandler(this.porudžbenicaToolStripMenuItem_Click);
+            // 
             // šifrarnikToolStripMenuItem
             // 
             this.šifrarnikToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -109,13 +116,6 @@
             this.btnPrikazi.Text = "Prikazi";
             this.btnPrikazi.UseVisualStyleBackColor = true;
             this.btnPrikazi.Click += new System.EventHandler(this.btnPrikazi_Click);
-            // 
-            // porudžbenicaToolStripMenuItem
-            // 
-            this.porudžbenicaToolStripMenuItem.Name = "porudžbenicaToolStripMenuItem";
-            this.porudžbenicaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.porudžbenicaToolStripMenuItem.Text = "&Porudžbenica";
-            this.porudžbenicaToolStripMenuItem.Click += new System.EventHandler(this.porudžbenicaToolStripMenuItem_Click);
             // 
             // FrmMaterijalSastavnica
             // 

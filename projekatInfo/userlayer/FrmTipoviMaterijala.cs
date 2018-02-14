@@ -20,11 +20,6 @@ namespace projekatInfo
             InitializeComponent();
         }
 
-        private void btnPrikazi_Click(object sender, EventArgs e)
-        {
-            tipoviMaterijalaBO = new TipoviMaterijalaBO();
-            dataGrid1.DataSource = tipoviMaterijalaBO.PrimaryData;
-        }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
@@ -37,6 +32,13 @@ namespace projekatInfo
                 MessageBox.Show(ex.Message,"Error");
             }
 
+        }
+
+        private void FrmTipoviMaterijala_Load(object sender, EventArgs e)
+        {
+            tipoviMaterijalaBO = new TipoviMaterijalaBO();
+            dataGrid1.DataSource = tipoviMaterijalaBO.PrimaryData;
+            
         }
     }
 }

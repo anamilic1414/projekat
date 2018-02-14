@@ -31,8 +31,12 @@
             this.dataGrid2 = new System.Windows.Forms.DataGridView();
             this.btnExport = new System.Windows.Forms.Button();
             this.dataGrid1 = new System.Windows.Forms.DataGridView();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.opcijeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.unosNovePorudzbineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGrid2
@@ -61,20 +65,50 @@
             this.dataGrid1.Size = new System.Drawing.Size(558, 102);
             this.dataGrid1.TabIndex = 2;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.opcijeToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(626, 24);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // opcijeToolStripMenuItem
+            // 
+            this.opcijeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.unosNovePorudzbineToolStripMenuItem});
+            this.opcijeToolStripMenuItem.Name = "opcijeToolStripMenuItem";
+            this.opcijeToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.opcijeToolStripMenuItem.Text = "&Opcije";
+            // 
+            // unosNovePorudzbineToolStripMenuItem
+            // 
+            this.unosNovePorudzbineToolStripMenuItem.Name = "unosNovePorudzbineToolStripMenuItem";
+            this.unosNovePorudzbineToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.unosNovePorudzbineToolStripMenuItem.Text = "Unos nove porudzbine";
+            this.unosNovePorudzbineToolStripMenuItem.Click += new System.EventHandler(this.unosNovePorudzbineToolStripMenuItem_Click);
+            // 
             // FrmPorudzbenica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(663, 324);
+            this.ClientSize = new System.Drawing.Size(626, 324);
             this.Controls.Add(this.dataGrid1);
             this.Controls.Add(this.btnExport);
             this.Controls.Add(this.dataGrid2);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmPorudzbenica";
             this.Text = "FrmPorudzbenica";
             this.Load += new System.EventHandler(this.FrmPorudzbenica_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -83,5 +117,8 @@
         private System.Windows.Forms.DataGridView dataGrid2;
         private System.Windows.Forms.Button btnExport;
         private System.Windows.Forms.DataGridView dataGrid1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem opcijeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem unosNovePorudzbineToolStripMenuItem;
     }
 }
