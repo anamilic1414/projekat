@@ -35,6 +35,8 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.btnInsert = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -65,29 +67,31 @@
             // 
             // dataGrid2
             // 
+            this.dataGrid2.AllowUserToAddRows = false;
             this.dataGrid2.AllowUserToDeleteRows = false;
-            this.dataGrid2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dataGrid2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGrid2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dataGrid2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGrid2.Location = new System.Drawing.Point(0, 24);
             this.dataGrid2.Name = "dataGrid2";
             this.dataGrid2.ReadOnly = true;
-            this.dataGrid2.Size = new System.Drawing.Size(448, 125);
+            this.dataGrid2.Size = new System.Drawing.Size(448, 212);
             this.dataGrid2.TabIndex = 5;
-            this.dataGrid2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid2_CellDoubleClick);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(109, 19);
+            this.btnUpdate.Location = new System.Drawing.Point(176, 19);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 2;
-            this.btnUpdate.Text = "Update";
+            this.btnUpdate.Text = "Izmeni";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnDelete);
+            this.panel1.Controls.Add(this.btnInsert);
             this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -98,13 +102,32 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(254, 19);
+            this.btnCancel.Location = new System.Drawing.Point(351, 19);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 3;
-            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Text = "Odustani";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnInsert
+            // 
+            this.btnInsert.Location = new System.Drawing.Point(95, 19);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(75, 23);
+            this.btnInsert.TabIndex = 7;
+            this.btnInsert.Text = "Dodaj";
+            this.btnInsert.UseVisualStyleBackColor = true;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(14, 19);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 7;
+            this.btnDelete.Text = "Izbriši";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // FrmPorudzbenica
             // 
@@ -136,5 +159,7 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnInsert;
     }
 }

@@ -46,6 +46,8 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.datePickerDatum = new System.Windows.Forms.DateTimePicker();
             this.datePickerIsporuka = new System.Windows.Forms.DateTimePicker();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1p)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -53,7 +55,7 @@
             // 
             // dataGrid1p
             // 
-            this.dataGrid1p.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGrid1p.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dataGrid1p.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGrid1p.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGrid1p.Location = new System.Drawing.Point(0, 141);
@@ -143,6 +145,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.datePickerIsporuka);
             this.panel1.Controls.Add(this.datePickerDatum);
             this.panel1.Controls.Add(this.txtDatum);
@@ -209,6 +213,22 @@
             this.datePickerIsporuka.Size = new System.Drawing.Size(135, 20);
             this.datePickerIsporuka.TabIndex = 4;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(335, 115);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 5;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(281, 121);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(48, 13);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "vrednost";
+            // 
             // FrmStavkePorudzbine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,5 +279,7 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.DateTimePicker datePickerIsporuka;
         private System.Windows.Forms.DateTimePicker datePickerDatum;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

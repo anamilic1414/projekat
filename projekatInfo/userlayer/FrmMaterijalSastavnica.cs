@@ -48,7 +48,7 @@ namespace projekatInfo.userlayer
         private void porudžbenicaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmPorudzbenica frm = new FrmPorudzbenica();
-            frm.ShowDialog();
+            frm.Show();
         }
 
         

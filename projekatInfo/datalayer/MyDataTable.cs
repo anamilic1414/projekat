@@ -49,11 +49,11 @@ namespace projekatInfo.datalayer
             
             
             
-                string query = "select * from " + TableName;
-                SQLiteCommand command = Program.konekcija.CreateCommand();
+           string query = "select * from " + TableName;
+           SQLiteCommand command = Program.konekcija.CreateCommand();
                 /* command.CommandText = query;
                  command.ExecuteNonQuery();*/
-                adp = new SQLiteDataAdapter(query, Program.konekcija);
+            adp = new SQLiteDataAdapter(query, Program.konekcija);
             DataTableMapping dataMapping = adp.TableMappings.Add(TableName, TableName);
             this.DataSet.Tables.Add(this);
             adp.Fill(this);
@@ -76,6 +76,11 @@ namespace projekatInfo.datalayer
         }
         public void Insert(string idPor, string tipMat, string idMat, string kolicina)
         {
+            if(idPor=="" || tipMat=="" || idMat=="" || kolicina == "")
+            {
+                MessageBox.Show("Morate uneti sva polja!");
+                return;
+            }
             this.cmb = new SQLiteCommandBuilder(this.adp);
             /*adp.InsertCommand = cmb.GetInsertCommand();*/
             SQLiteCommand cmd = new SQLiteCommand();
@@ -92,9 +97,26 @@ namespace projekatInfo.datalayer
             cmd.ExecuteNonQuery();
             this.adp.Update(this);
             this.DataSet.AcceptChanges();
-            MessageBox.Show("Inserted");
         }
-
-
+        public void Delete(string id)
+        {
+            this.cmb = new SQLiteCommandBuilder(this.adp);
+            SQLiteCommand cmd = new SQLiteCommand();
+            cmd.Connection = Program.konekcija;//SQLite connection
+            cmd.CommandText = "delete from "+TableName+ " where id=" + id;
+            cmd.ExecuteNonQuery();
+            this.adp.Update(this);
+            this.DataSet.AcceptChanges();
+        }
+        public string IzracunajCenu(string id)
+        {
+            string result = "";
+            this.cmb = new SQLiteCommandBuilder(this.adp);
+            SQLiteCommand cmd = new SQLiteCommand();
+            cmd.Connection = Program.konekcija;
+            cmd.CommandText = "select cena from materijal where id=" + id;
+            result = cmd.ExecuteScalar().ToString();
+            return result;
+        }
     }
 }

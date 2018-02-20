@@ -20,7 +20,7 @@ namespace projekatInfo.userlayer
            try
             {
                 porudzbenicaBO = new PorudzbinaBO();
-                materijalBO = new MaterijalBO();
+                //materijalBO = new MaterijalBO();
             }catch(Exception e)
             {
                 MessageBox.Show(e.Message);
@@ -33,28 +33,6 @@ namespace projekatInfo.userlayer
             bsMaster.DataSource = porudzbenicaBO.PrimaryData;
 
             dataGrid2.DataSource = bsMaster;
-            dataGrid2.Columns[0].Visible = false;
-            //this.dataGrid2.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGrid2.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGrid2.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGrid2.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGrid2.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
-            /*DataGridViewComboBoxColumn combo = new DataGridViewComboBoxColumn();
-            combo.Name = "materijal";
-            combo.DataSource = materijalBO.PrimaryData;
-            combo.ValueMember = "id";
-            combo.DisplayMember = "naziv";
-
-            dataGrid1.Columns.Add(combo);
-            dataGrid1.Columns[5].HeaderText = "materijal";
-            this.dataGrid1.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGrid1.AutoResizeColumns();*/
-
-            /*foreach (DataGridViewRow item in dataGrid1.Rows)
-            {
-                item.Cells[5].Value = item.Cells[3].Value;
-            }*/
 
         }
 
@@ -93,18 +71,12 @@ namespace projekatInfo.userlayer
             */
         }
 
-        private void dataGrid2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
             DataGridViewRow row = dataGrid2.CurrentRow;
             FrmStavkePorudzbine frm = new FrmStavkePorudzbine(row, bsMaster);
             frm.ShowDialog();
-        }
-        
 
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            porudzbenicaBO.PrimaryData.Update();
-            
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -123,6 +95,12 @@ namespace projekatInfo.userlayer
             {
                 this.Close();
             }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = dataGrid2.CurrentRow;
+            porudzbenicaBO.PrimaryData.Delete(row.Cells[0].Value.ToString());
         }
     }
 }
