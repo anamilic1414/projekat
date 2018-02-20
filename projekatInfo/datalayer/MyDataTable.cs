@@ -47,7 +47,7 @@ namespace projekatInfo.datalayer
             //kod filtriranja mora da se menja ime, jer svaka je karakteristicna
           
             
-            this.DataSet.Tables.Add(this);
+            
             
                 string query = "select * from " + TableName;
                 SQLiteCommand command = Program.konekcija.CreateCommand();
@@ -55,11 +55,12 @@ namespace projekatInfo.datalayer
                  command.ExecuteNonQuery();*/
                 adp = new SQLiteDataAdapter(query, Program.konekcija);
             DataTableMapping dataMapping = adp.TableMappings.Add(TableName, TableName);
+            this.DataSet.Tables.Add(this);
             adp.Fill(this);
             //adp.Update(DataSet);
            
         }
-   
+
         //sve crud metode da rade 
         //acceptchanges
         public void Update()
@@ -72,22 +73,26 @@ namespace projekatInfo.datalayer
 
             MessageBox.Show("Updated");
             //messageBox ne sme ovde
-            /*
-                try
-            {
-                SQLiteCommandBuilder builder = new SQLiteCommandBuilder(this.adp);
-                //SQLiteCommand command = Program.konekcija.CreateCommand();
-                var insertCommand = builder.GetInsertCommand();
-                
-                insertCommand.Parameters[0] = new SQLiteParameter("@param1","nesto");
-                
-                insertCommand.ExecuteNonQuery();
-                    adp.Update(this);
-        } catch (Exception e)
-                {
-                Console.WriteLine(e.Message);
-                }
-            */
+        }
+        public void Insert(string idPor, string tipMat, string idMat, string kolicina)
+        {
+            this.cmb = new SQLiteCommandBuilder(this.adp);
+            /*adp.InsertCommand = cmb.GetInsertCommand();*/
+            SQLiteCommand cmd = new SQLiteCommand();
+            cmd.Connection = Program.konekcija;//SQLite connection
+            cmd = cmb.GetInsertCommand();
+            SQLiteParameter p1 = new SQLiteParameter("@param1", idPor);
+            SQLiteParameter p2 = new SQLiteParameter("@param2", tipMat);
+            SQLiteParameter p3 = new SQLiteParameter("@param3", idMat);
+            SQLiteParameter p4 = new SQLiteParameter("@param4", kolicina);
+            cmd.Parameters.Add(p1);
+            cmd.Parameters.Add(p2);
+            cmd.Parameters.Add(p3);
+            cmd.Parameters.Add(p4);
+            cmd.ExecuteNonQuery();
+            this.adp.Update(this);
+            this.DataSet.AcceptChanges();
+            MessageBox.Show("Inserted");
         }
 
 

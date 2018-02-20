@@ -15,9 +15,6 @@ namespace projekatInfo.datalayer
             if (!DataSet.Relations.Contains("VezaPorudzbineStavke"))
             {
                 DataSet.Relations.Add("VezaPorudzbineStavke", this.Columns["id"], stavke.Columns["idPorudzbine"]);
-
-                /*this.Columns.Add("nazivTipaMaterijala", typeof(string));
-                this.Columns["nazivTipaMaterijala"].Expression = "parent.naziv";*/
             }
         }
 

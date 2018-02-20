@@ -35,7 +35,6 @@ namespace projekatInfo.userlayer
             {
                 materijalBO.PrimaryData.Update();
                 //BO ima update a ne tabeli da se pristupa
-                
             }
             catch (Exception ex)
             {

@@ -65,6 +65,7 @@
             this.btnPonisti.TabIndex = 2;
             this.btnPonisti.Text = "Poništi";
             this.btnPonisti.UseVisualStyleBackColor = true;
+            this.btnPonisti.Click += new System.EventHandler(this.FrmMaterijali_Load);
             // 
             // panel1
             // 

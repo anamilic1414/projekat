@@ -1,6 +1,6 @@
 ﻿namespace projekatInfo.userlayer
 {
-    partial class FrmUnosPorudzbine
+    partial class FrmUnosNovePorudzbine
     {
         /// <summary>
         /// Required designer variable.
@@ -123,7 +123,7 @@
             this.btnPotvrdi.UseVisualStyleBackColor = true;
             this.btnPotvrdi.Click += new System.EventHandler(this.btnPotvrdi_Click);
             // 
-            // FrmUnosPorudzbine
+            // FrmUnosNovePorudzbine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -138,8 +138,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.datePrijem);
-            this.Name = "FrmUnosPorudzbine";
-            this.Text = "FrmUnosPorudzbine";
+            this.Name = "FrmUnosNovePorudzbine";
+            this.Text = "FrmUnosNovePorudzbine";
             this.Load += new System.EventHandler(this.FrmUnosPorudzbine_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).EndInit();
             this.ResumeLayout(false);

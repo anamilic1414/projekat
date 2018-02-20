@@ -111,6 +111,12 @@
     <Compile Include="userlayer\FrmPorudzbenica.Designer.cs">
       <DependentUpon>FrmPorudzbenica.cs</DependentUpon>
     </Compile>
+    <Compile Include="userlayer\FrmStavkePorudzbine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userlayer\FrmStavkePorudzbine.Designer.cs">
+      <DependentUpon>FrmStavkePorudzbine.cs</DependentUpon>
+    </Compile>
     <Compile Include="userlayer\FrmTipoviMaterijala.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="userlayer\FrmPorudzbenica.resx">
       <DependentUpon>FrmPorudzbenica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userlayer\FrmStavkePorudzbine.resx">
+      <DependentUpon>FrmStavkePorudzbine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userlayer\FrmTipoviMaterijala.resx">
       <DependentUpon>FrmTipoviMaterijala.cs</DependentUpon>

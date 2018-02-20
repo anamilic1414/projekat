@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace projekatInfo.userlayer
 {
-    public partial class FrmUnosPorudzbine : Form
+    public partial class FrmUnosNovePorudzbine : Form
     {
         PorudzbinaBO porudzbinaBO;
-        public FrmUnosPorudzbine()
+        public FrmUnosNovePorudzbine()
         {
             InitializeComponent();
         }
